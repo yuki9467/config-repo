@@ -30,7 +30,7 @@ logging:
   level:
     root: info
     com.bqhx.officeautomation: debug
-  file: /home/www/logs/${spring.application.name}.log
+  file: E:/logs/oauth-center/${spring.application.name}.log
 security:
   oauth2:
     resource:

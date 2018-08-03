@@ -11,7 +11,7 @@ logging:
   level:
     root: info
     com.bqhx.officeautomation: debug
-  file: /home/www/logs/${spring.application.name}.log
+  file: E:/logs/gateway-zuul/${spring.application.name}.log
 zuul:
   ignored-services: '*'
   sensitiveHeaders:
