@@ -1,0 +1,38 @@
+#mybatis配置
+bqhx:
+  mybatis:
+    mapperLocations: classpath:/mappings/*.xml
+    configLocation: classpath:/mybatisConfig/mybatis-config.xml
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.212:3306/bq_operational_analysis?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: BQpa55d-#
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-test-query: SELECT 1
+# aop配置
+  aop:
+    auto: true
+    proxy-target-class: true
+  mvc:
+    servlet:
+      load-on-startup: 1
+  redis:
+    host: 192.168.1.213
+    port: 6379
+    password: 123456789
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://192.168.1.107:8080/api-o/user-me
+      prefer-token-info: false
+#日志配置
+logging:
+  level:
+    root: info
+    com.bqhx.officeautomation: debug
+  file: /home/www/logs/${spring.application.name}.log
